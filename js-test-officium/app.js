@@ -4,7 +4,7 @@ var tenant = "wvzrubicon.onmicrosoft.com";
 var URI_FUNC_SALUTATIO = "https://func-wvz-officium.azurewebsites.net/api/salutatio";
 
 function popUpLoginCallback(errorDescription, token, error) {
-  window.location.href = "http://localhost:4200";
+  window.location.href = "http://localhost:8000";
 }
 
 $(document).ready(function () {
