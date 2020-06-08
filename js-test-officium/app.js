@@ -1,7 +1,7 @@
 var clientId = "343eb415-883a-4a75-a611-0b24033e19ff";
 var tenant = "wvzrubicon.onmicrosoft.com";
 
-var URI_FUNC_SALUTATIO = "https://func-wvz-officium.azurewebsites.net/api/salutatio";
+var URI_FUNCTION = "https://func-wvz-officium.azurewebsites.net/api/salutatio";
 
 function popUpLoginCallback(errorDescription, token, error) {
   window.location.href = "http://localhost:8000";
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     $.ajax({
       method: "POST",
-      url: URI_FUNC_SALUTATIO,
+      url: URI_FUNCTION,
       headers: {
         Authorization: "Bearer " + token,
         "Content-Type": "application/json",
