@@ -65,7 +65,11 @@ export class HomeComponent implements OnInit {
     // wat dus mislukt, waarna er een (gegenereerde?) vendor.js bestand wordt geprobeerd te openen,
     // zodat uiteindelijk in de console een (zeer misleidende) CORS error wordt getoond!!
     // De catchError(..) zorgt ervoor dat de 'daadwerkelijke' foutomschrijving wordt verkregen.
-    return this.http.post('https://func-wvz-officium.azurewebsites.net/api/salutatio', null, { headers, responseType: 'text' })
+    
+    return this.http.post(
+      'https://func-wvz-officium.azurewebsites.net/api/salutatio',
+      null,
+      { headers, responseType: 'text' })
       .pipe(
         retry(1),
         catchError(this.handleError)
