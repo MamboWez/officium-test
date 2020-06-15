@@ -8,8 +8,8 @@ function popUpLoginCallback(errorDescription, token, error) {
 }
 
 $(document).ready(function () {
-  if (clientId.length !== 36 || tenant.length < 1) {
-    alert("Please set proper clientId and tenant in js sources.");
+  if (clientId.length !== 36 || tenant.length < 1) {   
+    showModal("Alert", "Please set proper clientId and tenant in js sources.");
   }
 
   var openAuthInPopup = false;
@@ -42,8 +42,9 @@ $(document).ready(function () {
   });
 
   $("#btn-request-function-salutatio").click(function () {
-    if (!isLoggedIn(user, token)) {
-      alert("Not authorized");
+    if (!isLoggedIn(user, token)) {      
+      showModal("Alert", "Not authorized");
+
       return;
     }
 
@@ -55,18 +56,27 @@ $(document).ready(function () {
         "Content-Type": "application/json",
       },      
       success: function (data) {
-        console.log(JSON.stringify(data, null, 4));
+        //console.log(JSON.stringify(data, null, 4));
+
         $("#results").text(JSON.stringify(data, null, 4));
       },
-      error: function (data) {
-        alert("Whoops, something went wrong. " + data);
-        console.info(data);
+      error: function (data) {        
+        showModal('Whoops, something went wrong.', JSON.stringify(data, null, 4));        
+
         $("#results").text(JSON.stringify(data, null, 4));
       },
     });
   });
 
 });
+
+function showModal(titleText, bodyText) {
+  $('#modalLong .modal-title').text(titleText);
+  $('#modalLong .modal-body').text(bodyText);
+  $('#modalLong').modal('show');
+
+  console.info(bodyText);
+}
 
 function handleAADCallback(ac) {
   ac.handleWindowCallback();
