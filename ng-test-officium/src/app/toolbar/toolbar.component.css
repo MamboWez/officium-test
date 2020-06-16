@@ -2,4 +2,28 @@
     /* This fills the remaining space, by using flexbox. 
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
-  }
+}
+
+[color="primary"] {
+    background-color: #2C4D77;
+}
+
+[color="accent"] {
+    background-color: #E67B00;
+}
+
+
+/* word-wrap for text content in pre-tags */
+
+pre {
+    /* Since CSS 2.1 */
+    white-space: pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -moz-pre-wrap;
+    /* Opera 4-6 */
+    white-space: -pre-wrap;
+    /* Opera 7 */
+    white-space: -o-pre-wrap;
+    /* Internet Explorer 5.5+ */
+    word-wrap: break-word;
+}

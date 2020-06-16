@@ -23,9 +23,7 @@ export class HomeComponent implements OnInit {
     this.setSalutatio();
     this.setUserInfo();
     this.setCachedUser();
-    this.setCachedToken();
-
-    this.userinfo.token = this.userinfo.token.substring(0, 10) + '...';
+    this.setCachedToken();    
   }
 
   public setSalutatio() {
@@ -49,9 +47,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  public setCachedToken() {
-    const cachedtoken = this.getCachedToken().substring(0, 30) + '...';
-    this.cachedtoken = cachedtoken;
+  public setCachedToken() {    
+    this.cachedtoken = this.getCachedToken();
   }
 
   public getSalutatio(token: string): Observable<Object> {

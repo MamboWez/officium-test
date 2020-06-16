@@ -1,3 +1,7 @@
-.example-card {
-  max-width: 1000px;
+.mat-card-title {
+    color: #163968;
+}
+
+button {
+    color: #E67B00;
 }

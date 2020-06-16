@@ -1,73 +1,75 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>salutatio (Azure Function)</mat-card-title>
-    <mat-card-subtitle>https://func-wvz-officium.azurewebsites.net/api/salutatio</mat-card-subtitle>
-  </mat-card-header>
+<br/>
 
-  <mat-card-content>
-    <pre>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>salutatio (Azure Function)</mat-card-title>
+        <mat-card-subtitle>https://func-wvz-officium.azurewebsites.net/api/salutatio</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <pre>
       {{salutatio}}
     </pre>
-  </mat-card-content>
+    </mat-card-content>
 
-  <mat-card-actions>
-    <button mat-button name="salutatio" (click)="salutatioClicked()">Reload</button>
-  </mat-card-actions>
+    <mat-card-actions>
+        <button mat-button name="salutatio" (click)="salutatioClicked()">Reload</button>
+    </mat-card-actions>
 </mat-card>
 
 <br/>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>User Info</mat-card-title>
-    <mat-card-subtitle>adalService.userInfo</mat-card-subtitle>
-  </mat-card-header>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>User Info</mat-card-title>
+        <mat-card-subtitle>adalService.userInfo</mat-card-subtitle>
+    </mat-card-header>
 
-  <mat-card-content>
-    <pre>
+    <mat-card-content>
+        <pre>
       {{userinfo | json}}
     </pre>
-  </mat-card-content>
+    </mat-card-content>
 
-  <mat-card-actions>
-    <button mat-button name="userinfo" (click)="userinfoClicked()">Reload</button>
-  </mat-card-actions>
+    <mat-card-actions>
+        <button mat-button name="userinfo" (click)="userinfoClicked()">Reload</button>
+    </mat-card-actions>
 </mat-card>
 
 <br/>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>Cached User</mat-card-title>
-    <mat-card-subtitle>adalService.getUser()</mat-card-subtitle>
-  </mat-card-header>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Cached User</mat-card-title>
+        <mat-card-subtitle>adalService.getUser()</mat-card-subtitle>
+    </mat-card-header>
 
-  <mat-card-content>
-    <pre>
+    <mat-card-content>
+        <pre>
       {{cacheduser | json}}
     </pre>
-  </mat-card-content>
+    </mat-card-content>
 
-  <mat-card-actions>
-    <button mat-button name="cacheduser" (click)="cacheduserClicked()">Reload</button>
-  </mat-card-actions>
+    <mat-card-actions>
+        <button mat-button name="cacheduser" (click)="cacheduserClicked()">Reload</button>
+    </mat-card-actions>
 </mat-card>
 
 <br/>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>Token</mat-card-title>
-    <mat-card-subtitle>adalService.getCachedToken(..)</mat-card-subtitle>
-  </mat-card-header>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Token</mat-card-title>
+        <mat-card-subtitle>adalService.getCachedToken(..)</mat-card-subtitle>
+    </mat-card-header>
 
-  <mat-card-content>
-    <pre>
+    <mat-card-content>
+        <pre>
       {{cachedtoken}}
     </pre>
-  </mat-card-content>
+    </mat-card-content>
 
-  <mat-card-actions>
-    <button mat-button name="token" (click)="tokenClicked()">Reload</button>
-  </mat-card-actions>
+    <mat-card-actions>
+        <button mat-button name="token" (click)="tokenClicked()">Reload</button>
+    </mat-card-actions>
 </mat-card>
